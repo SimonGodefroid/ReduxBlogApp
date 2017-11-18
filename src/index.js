@@ -14,7 +14,9 @@ ReactDOM.render(
 	<Provider store={createStoreWithMiddleware(reducers)}>
 		<BrowserRouter>
 			<div>
+				{/* Switch is new in router 4 */}
 				<Switch>
+					{/* After Switch we need to put the most specific routes first */}
 					<Route path={`/posts/new`} component={PostsNew} />
 					<Route path={`/`} component={PostsIndex} />
 				</Switch>
